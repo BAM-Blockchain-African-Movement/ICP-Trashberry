@@ -1,0 +1,38 @@
+{
+  "canisters": {
+    "internet_identity": {
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "frontend": {},
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      },
+      "type": "custom",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
+    },
+    "trash_berry_canister_backend": {
+      "candid": "src/trash_berry_canister_backend/trash_berry_canister_backend.did",
+      "package": "trash_berry_canister_backend",
+      "type": "rust"
+    },
+    "trash_berry_canister_frontend": {
+      "dependencies": [
+        "trash_berry_canister_backend"
+      ],
+      "source": [
+        "src/trash_berry_canister_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "trash_berry_canister_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "src/trash_berry_canister_backend"
+]
+resolver = "2"
